@@ -2,7 +2,6 @@
   "name": "小新",
   "short_name": "小新AI",
   "start_url": "/index.html",
-  "scope": "/",
   "display": "standalone",
   "background_color": "#f7f5f2",
   "theme_color": "#f7f5f2",
