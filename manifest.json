@@ -1,12 +1,10 @@
 {
   "name": "小新",
   "short_name": "小新AI",
-  "start_url": "/index.html",
+  "start_url": "https://952703976.github.io/xiaoxin/index.html",
   "display": "standalone",
   "background_color": "#f7f5f2",
   "theme_color": "#f7f5f2",
-  "description": "一个会学习、能互怼的智能聊天伙伴",
-  "categories": ["社交", "娱乐"],
   "icons": [
     {
       "src": "https://952703976.github.io/xiaoxin/icon-512.png",
