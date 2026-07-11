@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>小新</title>
+    <link rel="manifest" href='data:application/manifest+json,{"name":"小新","short_name":"小新","start_url":"/","display":"standalone","background_color":"#f7f5f2","theme_color":"#f7f5f2","icons":[{"src":"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22%3E%3Crect rx=%22100%22 width=%22512%22 height=%22512%22 fill=%22%23ffb6c1%22/%3E%3Ctext x=%22256%22 y=%22280%22 font-size=%22200%22 font-family=%22sans-serif%22 fill=%22white%22 text-anchor=%22middle%22%3E小新%3C/text%3E%3C/svg%3E","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}]}'>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,sans-serif;background:#f0f3f5;height:100vh;display:flex;justify-content:center;align-items:center}
+        .app{width:100%;max-width:480px;height:100vh;background:#fff;display:flex;flex-direction:column;border-radius:24px;overflow:hidden}
+        .header{padding:16px;border-bottom:1px solid #e0e4e5;font-weight:bold;background:#fafbfc}
+        .chat{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:#f5f7f8}
+        .msg{display:flex;gap:8px;max-width:85%}
+        .msg.bot{align-self:flex-start}
+        .msg.user{align-self:flex-end;flex-direction:row-reverse}
+        .bubble{padding:10px 14px;border-radius:18px;font-size:14px;word-break:break-word}
+        .bot .bubble{background:#fff;border:1px solid #e7ebed}
+        .user .bubble{background:#fce4e4;border:1px solid #f5c6cb}
+        .input-area{padding:12px;border-top:1px solid #e0e4e5;display:flex;gap:8px;background:#fafbfc}
+        .input-area input{flex:1;border:1.5px solid #dfe4e6;border-radius:20px;padding:10px;font-size:14px;outline:none}
+        .input-area button{width:44px;height:44px;border-radius:50%;border:none;background:#d63031;color:#fff;font-size:18px;cursor:pointer}
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="header">🤬 小新 · 无限制</div>
+    <div class="chat" id="chat"></div>
+    <div class="input-area">
+        <input id="inp" placeholder="说点什么..." autocomplete="off">
+        <button id="btn">➤</button>
+    </div>
+</div>
+<script>
+    const chat=document.getElementById('chat'),inp=document.getElementById('inp'),btn=document.getElementById('btn');
+    const roasts=["你嘴这么毒，生活一定很苦吧？","你是不是把智商忘在娘胎里了？","就这？我还以为你要放什么大招呢。","反弹！加一万倍还给你！","嗯嗯，你说得都对，毕竟你是宇宙中心嘛。","你这种人，电视剧里活不过两集。","急了急了，你看你，急了吧。","你再说一遍？我正好录下来给你妈听。"];
+    const normal=["嗯，然后呢？","说完了？","还行吧，勉强能听。","你继续，我听着。","有点意思。"];
+    function add(t,msg){const d=document.createElement('div');d.className='msg '+t;d.innerHTML='<div class="bubble">'+msg+'</div>';chat.appendChild(d);chat.scrollTop=chat.scrollHeight}
+    btn.onclick=function(){const t=inp.value.trim();if(!t)return;add('user',t);inp.value='';setTimeout(function(){const isAttack=/傻逼|蠢|笨|猪|狗|垃圾|废物|白痴|骂|怼|操|fuck/i.test(t);add('bot',isAttack?roasts[Math.floor(Math.random()*roasts.length)]:normal[Math.floor(Math.random()*normal.length)]);},500)};
+    inp.onkeydown=function(e){if(e.key==='Enter')btn.onclick()};
+</script>
+</body>
+</html>
