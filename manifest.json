@@ -1,8 +1,9 @@
 {
   "name": "小新",
   "short_name": "小新AI",
-  "start_url": "/xiaoxin/",
-  "scope": "/xiaoxin/",
+  "description": "一个会学习、能互怼的智能聊天伙伴",
+  "start_url": "/index.html",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#f7f5f2",
   "theme_color": "#f7f5f2",
@@ -12,13 +13,7 @@
       "src": "https://952703976.github.io/xiaoxin/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "https://952703976.github.io/xiaoxin/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ]
 }
