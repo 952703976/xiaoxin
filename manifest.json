@@ -1,15 +1,18 @@
 {
-  "background_color": "#f7f5f2",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "小新",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "小新AI",
-  "start_url": "/",
-  "theme_color": "#f7f5f2",
   "description": "一个会学习、能互怼的智能聊天伙伴",
-  "share_target": {
-    "method": "GET"
-  }
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5f2",
+  "theme_color": "#f7f5f2",
+  "categories": ["社交", "娱乐"],
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
