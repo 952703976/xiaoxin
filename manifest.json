@@ -1,0 +1,16 @@
+{
+  "name": "小新",
+  "short_name": "小新AI",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f7f5f2",
+  "theme_color": "#f7f5f2",
+  "icons": [
+    {
+      "src": "https://952703976.github.io/xiaoxin/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
