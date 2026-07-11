@@ -1,8 +1,8 @@
 {
   "name": "小新",
   "short_name": "小新AI",
-  "description": "一个会学习、能互怼的智能聊天伙伴",
-  "start_url": "/",
+  "start_url": "/xiaoxin/",
+  "scope": "/xiaoxin/",
   "display": "standalone",
   "background_color": "#f7f5f2",
   "theme_color": "#f7f5f2",
